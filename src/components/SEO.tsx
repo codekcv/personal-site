@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 type Props = {
-  title: string
+  title?: string
   description?: string
   lang?: string
   meta?: Array<
@@ -33,7 +33,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
   return (
     <Helmet
       htmlAttributes={{ lang }}
-      title={title}
+      title={title ?? ""}
       titleTemplate={(defaultTitle ? `%s | ${defaultTitle}` : null) as any}
       meta={[
         {
