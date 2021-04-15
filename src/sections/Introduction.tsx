@@ -19,6 +19,7 @@ const Introduction: React.FC = () => (
       formats={["auto", "webp", "avif"]}
       alt="Christian Villamin's profile picture."
       placeholder="tracedSVG"
+      style={{ marginBottom: "1rem", borderRadius: "50%" }}
     />
 
     <h1>Hello, I'm Christian</h1>
