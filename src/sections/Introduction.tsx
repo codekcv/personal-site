@@ -4,13 +4,12 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const Container = styled.div`
   > h1 {
-    font-size: 42px;
+    font-size: 2rem;
   }
 `
 
 const Introduction: React.FC = () => (
   <Container>
-    <h1>Hello, I'm Christian</h1>
     <StaticImage
       src="../images/my-picture.png"
       width={300}
@@ -18,7 +17,11 @@ const Introduction: React.FC = () => (
       formats={["auto", "webp", "avif"]}
       alt="A Gatsby astronaut"
       style={{ marginBottom: `1.45rem` }}
+      placeholder="blurred"
     />
+
+    <h1>Hello, I'm Christian</h1>
+    <p>I build web sites and web applications.</p>
   </Container>
 )
 
