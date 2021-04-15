@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "@reach/router": path.dirname(
+          require.resolve(`@gatsbyjs/reach-router/package.json`)
+        ),
+      },
+    },
+  })
+}
