@@ -3,6 +3,6 @@ import styled from "styled-components"
 
 const Container = styled.div``
 
-const Projects: React.FC = () => <Container>Projects</Container>
+const Experience: React.FC = () => <Container>Experience</Container>
 
-export default Projects
+export default Experience
