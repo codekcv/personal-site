@@ -1,29 +1,40 @@
 import * as React from "react"
-import { styled } from "@linaria/react"
 import { StaticImage } from "gatsby-plugin-image"
+import styled from "styled-components"
 
 const Container = styled.div`
   text-align: center;
+  display: flex;
 
-  > h1 {
-    font-size: 2rem;
+  .section-left {
+    margin-right: 1rem;
+    border-right: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-right: 1rem;
+
+    > h1 {
+      font-size: 2rem;
+    }
   }
 `
 
 const Introduction: React.FC = () => (
   <Container>
-    <StaticImage
-      src="../images/my-picture.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="Christian Villamin's profile picture."
-      placeholder="tracedSVG"
-      style={{ marginBottom: "1rem", borderRadius: "50%" }}
-    />
+    <div className="section-left">
+      <StaticImage
+        src="../images/my-picture.png"
+        width={300}
+        quality={95}
+        formats={["auto", "webp", "avif"]}
+        alt="Christian Villamin's profile picture."
+        placeholder="tracedSVG"
+        style={{ borderRadius: "50%" }}
+      />
 
-    <h1>Hello, I'm Christian</h1>
-    <p>I build web sites and web applications.</p>
+      <h1>Christian Villamin</h1>
+      <p>I build web sites and web applications.</p>
+    </div>
+
+    <div className="section-right"></div>
   </Container>
 )
 

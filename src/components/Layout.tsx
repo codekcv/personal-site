@@ -1,7 +1,7 @@
 import * as React from "react"
-import { styled } from "@linaria/react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./Layout.css"
+import styled from "styled-components"
 
 const theme = {
   space: [
@@ -18,17 +18,12 @@ const theme = {
 
 const Container = styled.div`
   background-color: white;
-  max-width: 960px;
 
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
 
   > main {
     margin: 2rem;
-    padding: 2rem;
-
-    border: 1px solid gray;
-    border-radius: 6px;
   }
 `
 
