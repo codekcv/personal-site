@@ -4,12 +4,16 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 
 const Container = styled(motion.div)`
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  height: 400px;
+
   border-radius: 8px;
-  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.25);
 
   margin-bottom: 4rem;
   padding: 2rem;
+
+  overflow: hidden;
 `
 
 type Props = {
