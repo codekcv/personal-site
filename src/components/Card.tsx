@@ -4,8 +4,6 @@ import { motion } from "framer-motion"
 import styled from "styled-components"
 
 const Container = styled(motion.div)`
-  max-width: 960px;
-
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.05);

@@ -21,6 +21,7 @@ const Container = styled.div`
 
   margin: 0 auto;
   margin-top: 4rem;
+  width: 960px;
 
   > main {
     margin: 2rem;
