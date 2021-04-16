@@ -17,11 +17,9 @@ const theme = {
 }
 
 const Container = styled.div`
-  background-color: white;
-
   margin: 0 auto;
   margin-top: 4rem;
-  width: 960px;
+  max-width: 960px;
 
   > main {
     margin: 2rem;

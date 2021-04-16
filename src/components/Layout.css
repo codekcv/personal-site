@@ -4,9 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 
 body {
-  background-color: #fefefe;
+  background: #f4f4f4;
 }
