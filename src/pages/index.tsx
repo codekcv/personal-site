@@ -1,22 +1,373 @@
 import * as React from "react"
-import Card from "src/components/Card"
-import Layout from "src/components/Layout"
-import SEO from "src/components/SEO"
-import About from "src/sections/About"
-import Introduction from "src/sections/Introduction"
+import styled from "styled-components"
+import "src/components/Layout.css"
+import { StaticImage } from "gatsby-plugin-image"
 
-const sections = [Introduction, About, About, About, About, About]
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+
+  > main {
+    position: relative;
+    color: #333;
+    width: 840px;
+
+    > .left-node {
+      position: fixed;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      border-right: 2px groove #7a8d89;
+      padding-right: 2rem;
+      /* border: 1px solid #020202; */
+    }
+
+    > .right-node {
+      position: absolute;
+      width: 540px;
+      height: 200vh;
+      padding-top: 8rem;
+      left: 300px;
+    }
+  }
+
+  li {
+    margin-left: 2rem;
+  }
+`
+
+const ColumnLeft = styled.div`
+  width: inherit;
+  text-align: right;
+
+  > .name {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 1rem;
+
+    > h1 {
+      font-family: Impact, sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  > .quick-links {
+    margin-bottom: 1rem;
+
+    > ul {
+      list-style: none;
+    }
+  }
+
+  > .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+
+    > .links-container {
+      width: 220px;
+
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+
+      > a {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  > a {
+    margin-top: 0.5rem;
+    display: block;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+`
+
+const ColumnRight = styled.div`
+  > div {
+    padding: 2rem;
+    border-bottom: 3px dotted #7a8d89;
+  }
+
+  > .skills {
+    > .skill {
+      margin-bottom: 1rem;
+
+      > h2 {
+      }
+    }
+  }
+
+  > .programming {
+    > h1 {
+      margin-bottom: 1rem;
+    }
+
+    > h3 {
+      margin-bottom: 0.25rem;
+    }
+
+    > p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+`
 
 const IndexPage: React.FC = () => {
   return (
-    <Layout>
-      <SEO />
+    <Container>
+      <main>
+        <section className="left-node">
+          <ColumnLeft>
+            <div className="name">
+              <StaticImage
+                src="../images/my-picture.png"
+                width={200}
+                quality={95}
+                formats={["auto", "webp", "avif"]}
+                alt="Christian Villamin's profile picture."
+                placeholder="tracedSVG"
+                style={{ borderRadius: 8 }}
+              />
+              <h1>CHRISTIAN VILLAMIN</h1>
+              <p>
+                I build web sites and
+                <br />
+                web applications.
+              </p>
+            </div>
 
-      {sections.map(Section => (
-        <Card Component={<Section />} />
-      ))}
-    </Layout>
+            <div className="quick-links">
+              <h2>Quick Nav</h2>
+              <ul>
+                <li>
+                  <a href="#skills">Skills</a>
+                </li>
+                <li>
+                  <a href="#work-experience">Work Exp</a>
+                </li>
+                <li>
+                  <a href="#programming-experience">Prog Exp</a>
+                </li>
+                <li>
+                  <a href="#web-journey">Web Journey</a>
+                </li>
+                <li>
+                  <a href="#projects">Projects</a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="links">
+              <h2>My Links</h2>
+
+              <div className="links-container">
+                <a href="http://github.com/codekcv">GitHub</a>
+                <a href="https://www.linkedin.com/in/codekcv/">LinkedIn</a>
+                <a href="https://twitter.com/codekcv">Twitter</a>
+                <a href="https://codepen.io/codekcv">CodePen</a>
+                <a href="https://dev.to/codekcv">dev.to</a>
+                <a href="https://www.freecodecamp.org/codekcv">freeCodeCamp</a>
+                <a href="https://www.youtube.com/channel/UC9NkngOuNAcPGfx4Nl3ODgg/videos">
+                  YouTube
+                </a>
+              </div>
+            </div>
+
+            <p>
+              This is my second portfolio site. See my first one when I was
+              starting out with web
+            </p>
+
+            <a href="http://codekcv.github.io/">http://codekcv.github.io/</a>
+          </ColumnLeft>
+        </section>
+
+        <section className="right-node">
+          <ColumnRight>
+            <div id="skills" className="skills">
+              <h1>// SKILLS AND STUFF</h1>
+
+              <div className="skill">
+                <h2>Front-End</h2>
+
+                <ul>
+                  <li>HTML5, CSS3, ES6+, TypeScript</li>
+                  <li>React, GatsbyJS, NextJS (pro)</li>
+                  <li>Vue, Svelte (noob)</li>
+                  <li>styled-components, scss</li>
+                  <li>framer-motion, css animation</li>
+                  <li>tailwindCSS, chakraUI</li>
+                  <li>antd, materialUI</li>
+                </ul>
+              </div>
+
+              <div className="skill">
+                <h2>State Management (local)</h2>
+
+                <ul>
+                  <li>Redux / RTK (large app)</li>
+                  <li>Recoil (medium app)</li>
+                  <li>Zustand (small app)</li>
+                </ul>
+              </div>
+
+              <div className="skill">
+                <h2>State Management (network)</h2>
+
+                <ul>
+                  <li>Apollo (large app)</li>
+                  <li>react-query / SWR (small - medium)</li>
+                </ul>
+              </div>
+
+              <div className="skill">
+                <h2>Back-End</h2>
+
+                <ul>
+                  <li>NodeJS, TypeScript</li>
+                  <li>Express</li>
+                  <li>socket.io</li>
+                  <li>JWT</li>
+                  <li>Prisma + Nexus</li>
+                  <li>PostgreSQl || MongoDB</li>
+                  <li>GraphQL || REST</li>
+                </ul>
+              </div>
+
+              <div className="skill">
+                <h2>Testing</h2>
+
+                <ul>
+                  <li>Jest</li>
+                  <li>MochaJS</li>
+                  <li>React Testing Library</li>
+                  <li>e2e - Cypress</li>
+                </ul>
+              </div>
+
+              <div className="skill">
+                <h2>Version Control</h2>
+
+                <ul>
+                  <li>Git & GitHub</li>
+                  <li>Folder with dates (just kidding)</li>
+                </ul>
+              </div>
+
+              <div className="skill">
+                <h2>Tools & Collab</h2>
+
+                <ul>
+                  <li>git</li>
+                  <li>Slack & Discord</li>
+                  <li>atlassian jira</li>
+                  <li>Trello</li>
+                </ul>
+              </div>
+
+              <div className="skill">
+                <h2>System</h2>
+
+                <ul>
+                  <li>Linux (i use arch btw)</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* --- */}
+
+            <div id="work-experience" className="work">
+              <h1>// WORK EXPERIENCE</h1>
+
+              <h2>
+                High Output Ventures (<a href="https://hov.co/">hov.co</a>)
+              </h2>
+
+              <p>Dec 2019 - Current | Front-End Developer</p>
+              <p>Project I maintained in HOV.</p>
+              <p>Project I collaborated in HOV.</p>
+              <p>Project I built for HOV.</p>
+              <p>I also wrote an article in our HOV site.</p>
+            </div>
+
+            {/* --- */}
+
+            <div id="programming-experience" className="programming">
+              <h1>// PROGRAMMING EXPERIENCE</h1>
+              <h3>2006 - 2009 (hobbyist)</h3>
+              <p>
+                I self-taught myself to program when I was 12 using Blizzard's
+                event driven scripting langauge called JASS. I used it to create
+                mods and custom maps in Warcraft III and StarCraft II. Fun
+                times.
+              </p>
+
+              <h3>2011 - 2016 (java, c++, c#)</h3>
+              <p>
+                Learned Java in school. I used it to create applications, join
+                in programming competitions(and win). Created an android game.
+                c++ was taught but nothing fancy. Some c# because I got also
+                interested in Unity3D.
+              </p>
+
+              <h3>2019 - Current (JavaScript and the likes)</h3>
+              <p>This is the era I started to learn web development.</p>
+
+              <h3>Other languages I'm Learning</h3>
+              <p>
+                C(CS50 Course). Rust(for web assembly). Python(general, algo,
+                flask? maybe ML soon?).
+              </p>
+            </div>
+
+            <div id="web-journey" className="web-journey">
+              <h1>// WEB JOURNEY </h1>
+            </div>
+
+            <div id="projects" className="projects">
+              <h1>// LEARNING PROJECTS</h1>
+              <p>
+                These are just things I built as I was learning my way through
+                web development.
+              </p>
+            </div>
+          </ColumnRight>
+        </section>
+      </main>
+    </Container>
   )
 }
 
 export default IndexPage
+
+// const sections = [About, Skills, Experience, Projects, Blogs]
+
+// const IndexPage: React.FC = () => {
+//   return (
+//     <Layout>
+//       <SEO />
+
+//       {sections.map((Section, index) => (
+//         <Card key={index} Component={<Section />} />
+//       ))}
+//     </Layout>
+//   )
+// }
