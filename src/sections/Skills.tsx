@@ -102,12 +102,12 @@ const Skills: React.FC = () => (
     <h1>// SKILLS AND THINGS</h1>
 
     {skills.map(skill => (
-      <div className="skill">
+      <div key={skill.category} className="skill">
         <h2>{skill.category}</h2>
 
         <ul>
           {skill.technologies.map(technology => (
-            <li>{technology}</li>
+            <li key={technology}>{technology}</li>
           ))}
         </ul>
       </div>
