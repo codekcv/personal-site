@@ -5,7 +5,7 @@ const Container = styled.div``
 
 const WebJourney: React.FC = () => (
   <Container id="web">
-    <h1>// WEB JOURNEY</h1>
+    <h1>* WEB JOURNEY</h1>
 
     <h2>
       High Output Ventures (<a href="https://hov.co/">hov.co</a>)

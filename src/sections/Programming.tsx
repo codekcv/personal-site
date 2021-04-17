@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const Programming: React.FC = () => (
   <Container id="programming">
-    <h1>// PROGRAMMING EXPERIENCE</h1>
+    <h1>* PROGRAMMING EXPERIENCE</h1>
 
     <h3>2006 - 2009 (hobbyist)</h3>
     <p>

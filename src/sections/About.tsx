@@ -6,7 +6,7 @@ const Container = styled.div``
 
 const About: React.FC = () => (
   <div id="about">
-    <h1>// ABOUT ME AND STUFF</h1>
+    <h1>* ABOUT ME AND STUFF</h1>
 
     <p>
       i'm a software engineer. tinker lord. coding god. immortal. loves winning.

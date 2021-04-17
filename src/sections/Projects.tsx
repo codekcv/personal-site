@@ -5,7 +5,7 @@ const Container = styled.div``
 
 const Projects: React.FC = () => (
   <Container>
-    <h1>// LEARNING PROJECTS</h1>
+    <h1>* LEARNING PROJECTS</h1>
 
     <p>
       These are just things I built as I was learning my way through web

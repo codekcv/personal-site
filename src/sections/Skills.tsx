@@ -37,7 +37,7 @@ const skills: { category: string; technologies: string[] }[] = [
       "Redux / RTK (large app)",
       "Recoil (medium app)",
       "Zustand (small - medium app)",
-      "Context API (component scope",
+      "Context API (component scope)",
     ],
   },
   {
@@ -99,7 +99,7 @@ const skills: { category: string; technologies: string[] }[] = [
 
 const Skills: React.FC = () => (
   <Container id="skills">
-    <h1>// SKILLS AND THINGS</h1>
+    <h1>* SKILLS AND THINGS</h1>
 
     {skills.map(skill => (
       <div key={skill.category} className="skill">

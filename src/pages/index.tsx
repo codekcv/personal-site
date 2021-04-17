@@ -45,6 +45,15 @@ const Container = styled.div`
     margin-left: 1.65rem;
   }
 
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
   @media (max-width: 800px) {
     > main {
       display: block;
@@ -64,6 +73,18 @@ const Container = styled.div`
         padding-top: 2rem;
         width: 100%;
       }
+    }
+
+    h1 {
+      font-size: 5.5vw;
+    }
+
+    h2 {
+      font-size: 4.5vw;
+    }
+
+    li {
+      font-size: 3.5vw;
     }
   }
 `
@@ -127,13 +148,10 @@ const ColumnRight = styled.div`
     border-bottom: 3px dotted rgba(50, 100, 100, 0.15);
   }
 
-  h1 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 1.4rem;
+  @media (max-width: 800px) {
+    > div {
+      border-bottom: none;
+    }
   }
 `
 
