@@ -36,7 +36,6 @@ const Container = styled.div`
     > .right-node {
       position: relative;
       max-width: 540px;
-      height: 200vh;
       left: 260px;
       padding-top: 8rem;
     }
@@ -44,6 +43,28 @@ const Container = styled.div`
 
   li {
     margin-left: 1.65rem;
+  }
+
+  @media (max-width: 800px) {
+    > main {
+      display: block;
+      max-width: 540px;
+
+      > .left-node {
+        position: initial;
+
+        border-right: none;
+        padding-right: none;
+        width: 100%;
+        height: auto;
+      }
+
+      > .right-node {
+        left: 0;
+        padding-top: 2rem;
+        width: 100%;
+      }
+    }
   }
 `
 
