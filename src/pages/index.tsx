@@ -215,12 +215,17 @@ const IndexPage: React.FC = () => {
           <ColumnRight>
             <div id="about" className="skills">
               <h1>// ABOUT ME AND STUFF</h1>
+
               <p>
-                I'm a software engineer. Tinker Lord. Coding God. I don't play
-                games but I play sometimes. Dank memes are fun. Piano. Cats. A
-                little design.
+                i'm a software engineer. tinker lord. coding god. immortal.
+                loves winning. i don't play games but i play sometimes. dank
+                memes are fun. piano. cats. a little design. nature is life. i
+                respect your view but i have no interest in politics and
+                religion. detective conan fanboi. happy kid :)
               </p>
             </div>
+
+            {/* --- */}
 
             <div id="skills" className="skills">
               <h1>// SKILLS AND THINGS</h1>
@@ -233,11 +238,12 @@ const IndexPage: React.FC = () => {
                   <li>CSS</li>
                   <li>ES6+</li>
                   <li>TypeScript</li>
-                  <li>React</li>
-                  <li>GatsbyJS</li>
-                  <li>NextJS</li>
+                  <li>React(pro)</li>
+                  <li>GatsbyJS(pro)</li>
+                  <li>NextJS(pro)</li>
+                  <li>vue(noob)</li>
                   <li>styled-components</li>
-                  <li>Sass</li>
+                  <li>sass</li>
                   <li>Framer Motion</li>
                   <li>tailwindCSS</li>
                   <li>chakra</li>
@@ -323,9 +329,7 @@ const IndexPage: React.FC = () => {
                 </ul>
               </div>
             </div>
-
             {/* --- */}
-
             <div id="work-experience" className="work">
               <h1>// WORK EXPERIENCE</h1>
 
@@ -339,9 +343,7 @@ const IndexPage: React.FC = () => {
               <p>Project I built for HOV.</p>
               <p>I also wrote an article in our HOV site.</p>
             </div>
-
             {/* --- */}
-
             <div id="programming-experience" className="programming">
               <h1>// PROGRAMMING EXPERIENCE</h1>
               <h3>2006 - 2009 (hobbyist)</h3>
@@ -369,11 +371,9 @@ const IndexPage: React.FC = () => {
                 flask? maybe ML sometime?).
               </p>
             </div>
-
             <div id="web-journey" className="web-journey">
               <h1>// WEB JOURNEY </h1>
             </div>
-
             <div id="projects" className="projects">
               <h1>// LEARNING PROJECTS</h1>
               <p>
