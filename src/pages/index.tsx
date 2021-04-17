@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 import "src/components/Layout.css"
 import { StaticImage } from "gatsby-plugin-image"
+import SEO from "src/components/SEO"
 
 const Container = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ const Container = styled.div`
       justify-content: center;
       align-items: center;
       height: 100vh;
-      border-right: 2px groove #7a8d89;
+      border-right: 3px dotted rgba(50, 100, 100, 0.15);
       padding-right: 2rem;
       /* border: 1px solid #020202; */
     }
@@ -34,7 +35,7 @@ const Container = styled.div`
   }
 
   li {
-    margin-left: 2rem;
+    margin-left: 1.65rem;
   }
 `
 
@@ -94,7 +95,7 @@ const ColumnLeft = styled.div`
 const ColumnRight = styled.div`
   > div {
     padding: 2rem;
-    border-bottom: 3px dotted #7a8d89;
+    border-bottom: 3px dotted rgba(50, 100, 100, 0.15);
   }
 
   > .skills {
@@ -102,6 +103,11 @@ const ColumnRight = styled.div`
       margin-bottom: 1rem;
 
       > h2 {
+      }
+
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
       }
     }
   }
@@ -133,6 +139,8 @@ const ColumnRight = styled.div`
 const IndexPage: React.FC = () => {
   return (
     <Container>
+      <SEO title="My Portfolio" />
+
       <main>
         <section className="left-node">
           <ColumnLeft>
@@ -157,6 +165,9 @@ const IndexPage: React.FC = () => {
             <div className="quick-links">
               <h2>Quick Nav</h2>
               <ul>
+                <li>
+                  <a href="#about">About</a>
+                </li>
                 <li>
                   <a href="#skills">Skills</a>
                 </li>
@@ -202,20 +213,34 @@ const IndexPage: React.FC = () => {
 
         <section className="right-node">
           <ColumnRight>
+            <div id="about" className="skills">
+              <h1>// ABOUT ME AND STUFF</h1>
+              <p>
+                I'm a software engineer. Tinker Lord. Coding God. I don't play
+                games but I play sometimes. Dank memes are fun. Piano. Cats. A
+                little design.
+              </p>
+            </div>
+
             <div id="skills" className="skills">
-              <h1>// SKILLS AND STUFF</h1>
+              <h1>// SKILLS AND THINGS</h1>
 
               <div className="skill">
                 <h2>Front-End</h2>
 
                 <ul>
-                  <li>HTML5, CSS3, ES6+, TypeScript</li>
-                  <li>React, GatsbyJS, NextJS (pro)</li>
-                  <li>Vue, Svelte (noob)</li>
-                  <li>styled-components, scss</li>
-                  <li>framer-motion, css animation</li>
-                  <li>tailwindCSS, chakraUI</li>
-                  <li>antd, materialUI</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>ES6+</li>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>GatsbyJS</li>
+                  <li>NextJS</li>
+                  <li>styled-components</li>
+                  <li>Sass</li>
+                  <li>Framer Motion</li>
+                  <li>tailwindCSS</li>
+                  <li>chakra</li>
                 </ul>
               </div>
 
@@ -226,6 +251,7 @@ const IndexPage: React.FC = () => {
                   <li>Redux / RTK (large app)</li>
                   <li>Recoil (medium app)</li>
                   <li>Zustand (small app)</li>
+                  <li>Context API (component scope)</li>
                 </ul>
               </div>
 
@@ -233,8 +259,9 @@ const IndexPage: React.FC = () => {
                 <h2>State Management (network)</h2>
 
                 <ul>
-                  <li>Apollo (large app)</li>
-                  <li>react-query / SWR (small - medium)</li>
+                  <li>Apollo GraphQL (large app)</li>
+                  <li>react-query (small - medium app)</li>
+                  <li>SWR (small app)</li>
                 </ul>
               </div>
 
@@ -242,13 +269,17 @@ const IndexPage: React.FC = () => {
                 <h2>Back-End</h2>
 
                 <ul>
-                  <li>NodeJS, TypeScript</li>
+                  <li>NodeJS</li>
+                  <li>TypeScript</li>
                   <li>Express</li>
                   <li>socket.io</li>
                   <li>JWT</li>
-                  <li>Prisma + Nexus</li>
-                  <li>PostgreSQl || MongoDB</li>
-                  <li>GraphQL || REST</li>
+                  <li>Prisma </li>
+                  <li>Nexus</li>
+                  <li>PostgreSQl</li>
+                  <li>MongoDB</li>
+                  <li>GraphQL</li>
+                  <li>RESTful</li>
                 </ul>
               </div>
 
@@ -276,8 +307,8 @@ const IndexPage: React.FC = () => {
                 <h2>Tools & Collab</h2>
 
                 <ul>
-                  <li>git</li>
-                  <li>Slack & Discord</li>
+                  <li>Slack</li>
+                  <li>Discord</li>
                   <li>atlassian jira</li>
                   <li>Trello</li>
                 </ul>
@@ -287,7 +318,8 @@ const IndexPage: React.FC = () => {
                 <h2>System</h2>
 
                 <ul>
-                  <li>Linux (i use arch btw)</li>
+                  <li>Linux</li>
+                  <li>i use arch btw</li>
                 </ul>
               </div>
             </div>
@@ -329,12 +361,12 @@ const IndexPage: React.FC = () => {
               </p>
 
               <h3>2019 - Current (JavaScript and the likes)</h3>
-              <p>This is the era I started to learn web development.</p>
+              <p>This is the era I started my web development.</p>
 
-              <h3>Other languages I'm Learning</h3>
+              <h3>Languages learning on the side</h3>
               <p>
                 C(CS50 Course). Rust(for web assembly). Python(general, algo,
-                flask? maybe ML soon?).
+                flask? maybe ML sometime?).
               </p>
             </div>
 
