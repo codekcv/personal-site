@@ -30,7 +30,7 @@ const Container = styled.main`
 
   > .column-right {
     position: relative;
-    max-width: 540px;
+    width: 540px;
     left: 260px;
     padding-top: 8rem;
 
@@ -55,13 +55,14 @@ const Container = styled.main`
 
   @media (max-width: 800px) {
     display: block;
-    max-width: 540px;
+    width: 100%;
 
     > .column-left {
       position: initial;
 
       border-right: none;
-      padding-right: none;
+      padding-right: 0;
+      margin-right: 0;
       width: 100%;
       height: auto;
     }
@@ -80,8 +81,9 @@ const Container = styled.main`
       font-size: 4.5vw;
     }
 
+    p,
     li {
-      font-size: 3.5vw;
+      font-size: 3.75vw;
     }
   }
 `

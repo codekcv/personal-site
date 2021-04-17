@@ -2,10 +2,16 @@ import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import styled from "styled-components"
 
-const Container = styled.div``
+const Container = styled.div`
+  @media (max-width: 800px) {
+    p {
+      text-align: justify;
+    }
+  }
+`
 
 const About: React.FC = () => (
-  <div id="about">
+  <Container id="about">
     <h1>* ABOUT ME AND STUFF</h1>
 
     <p>
@@ -14,7 +20,7 @@ const About: React.FC = () => (
       a little design. nature is life. no interest in politics and religion, i
       respect your view. detective conan fanboi. happy kid :)
     </p>
-  </div>
+  </Container>
 )
 
 export default About

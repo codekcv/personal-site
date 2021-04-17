@@ -52,6 +52,13 @@ const Container = styled.div`
   p {
     font-size: 1rem;
   }
+
+  @media (max-width: 800px) {
+    text-align: center;
+    margin-top: 4rem;
+    width: 100%;
+    padding: 2rem;
+  }
 `
 
 const Header: React.FC = () => (
@@ -67,11 +74,7 @@ const Header: React.FC = () => (
         style={{ borderRadius: 8 }}
       />
       <h1>CHRISTIAN VILLAMIN</h1>
-      <p>
-        I build web sites and
-        <br />
-        web applications.
-      </p>
+      <p>I build web sites and web applications.</p>
     </div>
 
     <div className="quick-links">
