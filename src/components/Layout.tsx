@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import "./Layout.css"
 import styled from "styled-components"
 
 const theme = {

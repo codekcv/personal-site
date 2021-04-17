@@ -1,8 +1,14 @@
 import * as React from "react"
 import styled from "styled-components"
-import "src/components/Layout.css"
 import { StaticImage } from "gatsby-plugin-image"
 import SEO from "src/components/SEO"
+import "../../global.css"
+import About from "src/sections/About"
+import Skills from "src/sections/Skills"
+import Work from "src/sections/Work"
+import Programming from "src/sections/Programming"
+import WebJourney from "src/sections/WebJourney"
+import Projects from "src/sections/Projects"
 
 const Container = styled.div`
   display: flex;
@@ -10,27 +16,29 @@ const Container = styled.div`
 
   > main {
     position: relative;
+    display: flex;
+    width: 800px;
     color: #333;
-    width: 840px;
 
     > .left-node {
       position: fixed;
-      width: 300px;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      width: 260px;
       height: 100vh;
+
       border-right: 3px dotted rgba(50, 100, 100, 0.15);
       padding-right: 2rem;
-      /* border: 1px solid #020202; */
     }
 
     > .right-node {
-      position: absolute;
-      width: 540px;
+      position: relative;
+      max-width: 540px;
       height: 200vh;
+      left: 260px;
       padding-top: 8rem;
-      left: 300px;
     }
   }
 
@@ -40,7 +48,7 @@ const Container = styled.div`
 `
 
 const ColumnLeft = styled.div`
-  width: inherit;
+  width: 240px;
   text-align: right;
 
   > .name {
@@ -98,34 +106,6 @@ const ColumnRight = styled.div`
     border-bottom: 3px dotted rgba(50, 100, 100, 0.15);
   }
 
-  > .skills {
-    > .skill {
-      margin-bottom: 1rem;
-
-      > h2 {
-      }
-
-      > ul {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
-  }
-
-  > .programming {
-    > h1 {
-      margin-bottom: 1rem;
-    }
-
-    > h3 {
-      margin-bottom: 0.25rem;
-    }
-
-    > p {
-      margin-bottom: 1rem;
-    }
-  }
-
   h1 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
@@ -172,13 +152,13 @@ const IndexPage: React.FC = () => {
                   <a href="#skills">Skills</a>
                 </li>
                 <li>
-                  <a href="#work-experience">Work Exp</a>
+                  <a href="#work">Work Exp</a>
                 </li>
                 <li>
-                  <a href="#programming-experience">Prog Exp</a>
+                  <a href="#programming">Prog Exp</a>
                 </li>
                 <li>
-                  <a href="#web-journey">Web Journey</a>
+                  <a href="#web">Web Journey</a>
                 </li>
                 <li>
                   <a href="#projects">Projects</a>
@@ -207,180 +187,18 @@ const IndexPage: React.FC = () => {
               starting out with web
             </p>
 
-            <a href="http://codekcv.github.io/">http://codekcv.github.io/</a>
+            <a href="http://codekcv.github.io/">codekcv.github.io</a>
           </ColumnLeft>
         </section>
 
         <section className="right-node">
           <ColumnRight>
-            <div id="about" className="skills">
-              <h1>// ABOUT ME AND STUFF</h1>
-
-              <p>
-                i'm a software engineer. tinker lord. coding god. immortal.
-                loves winning. i don't play games but i play sometimes. dank
-                memes are fun. piano. cats. a little design. nature is life. i
-                respect your view but i have no interest in politics and
-                religion. detective conan fanboi. happy kid :)
-              </p>
-            </div>
-
-            {/* --- */}
-
-            <div id="skills" className="skills">
-              <h1>// SKILLS AND THINGS</h1>
-
-              <div className="skill">
-                <h2>Front-End</h2>
-
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>ES6+</li>
-                  <li>TypeScript</li>
-                  <li>React(pro)</li>
-                  <li>GatsbyJS(pro)</li>
-                  <li>NextJS(pro)</li>
-                  <li>vue(noob)</li>
-                  <li>styled-components</li>
-                  <li>sass</li>
-                  <li>Framer Motion</li>
-                  <li>tailwindCSS</li>
-                  <li>chakra</li>
-                </ul>
-              </div>
-
-              <div className="skill">
-                <h2>State Management (local)</h2>
-
-                <ul>
-                  <li>Redux / RTK (large app)</li>
-                  <li>Recoil (medium app)</li>
-                  <li>Zustand (small app)</li>
-                  <li>Context API (component scope)</li>
-                </ul>
-              </div>
-
-              <div className="skill">
-                <h2>State Management (network)</h2>
-
-                <ul>
-                  <li>Apollo GraphQL (large app)</li>
-                  <li>react-query (small - medium app)</li>
-                  <li>SWR (small app)</li>
-                </ul>
-              </div>
-
-              <div className="skill">
-                <h2>Back-End</h2>
-
-                <ul>
-                  <li>NodeJS</li>
-                  <li>TypeScript</li>
-                  <li>Express</li>
-                  <li>socket.io</li>
-                  <li>JWT</li>
-                  <li>Prisma </li>
-                  <li>Nexus</li>
-                  <li>PostgreSQl</li>
-                  <li>MongoDB</li>
-                  <li>GraphQL</li>
-                  <li>RESTful</li>
-                </ul>
-              </div>
-
-              <div className="skill">
-                <h2>Testing</h2>
-
-                <ul>
-                  <li>Jest</li>
-                  <li>MochaJS</li>
-                  <li>React Testing Library</li>
-                  <li>e2e - Cypress</li>
-                </ul>
-              </div>
-
-              <div className="skill">
-                <h2>Version Control</h2>
-
-                <ul>
-                  <li>Git & GitHub</li>
-                  <li>Folder with dates (just kidding)</li>
-                </ul>
-              </div>
-
-              <div className="skill">
-                <h2>Tools & Collab</h2>
-
-                <ul>
-                  <li>Slack</li>
-                  <li>Discord</li>
-                  <li>atlassian jira</li>
-                  <li>Trello</li>
-                </ul>
-              </div>
-
-              <div className="skill">
-                <h2>System</h2>
-
-                <ul>
-                  <li>Linux</li>
-                  <li>i use arch btw</li>
-                </ul>
-              </div>
-            </div>
-            {/* --- */}
-            <div id="work-experience" className="work">
-              <h1>// WORK EXPERIENCE</h1>
-
-              <h2>
-                High Output Ventures (<a href="https://hov.co/">hov.co</a>)
-              </h2>
-
-              <p>Dec 2019 - Current | Front-End Developer</p>
-              <p>Project I maintained in HOV.</p>
-              <p>Project I collaborated in HOV.</p>
-              <p>Project I built for HOV.</p>
-              <p>I also wrote an article in our HOV site.</p>
-            </div>
-            {/* --- */}
-            <div id="programming-experience" className="programming">
-              <h1>// PROGRAMMING EXPERIENCE</h1>
-              <h3>2006 - 2009 (hobbyist)</h3>
-              <p>
-                I self-taught myself to program when I was 12 using Blizzard's
-                event driven scripting langauge called JASS. I used it to create
-                mods and custom maps in Warcraft III and StarCraft II. Fun
-                times.
-              </p>
-
-              <h3>2011 - 2016 (java, c++, c#)</h3>
-              <p>
-                Learned Java in school. I used it to create applications, join
-                in programming competitions(and win). Created an android game.
-                c++ was taught but nothing fancy. Some c# because I got also
-                interested in Unity3D.
-              </p>
-
-              <h3>2019 - Current (JavaScript and the likes)</h3>
-              <p>This is the era I started my web development.</p>
-
-              <h3>Languages learning on the side</h3>
-              <p>
-                C(CS50 Course). Rust(for web assembly). Python(general, algo,
-                flask? maybe ML sometime?).
-              </p>
-            </div>
-            <div id="web-journey" className="web-journey">
-              <h1>// WEB JOURNEY </h1>
-            </div>
-            <div id="projects" className="projects">
-              <h1>// LEARNING PROJECTS</h1>
-              <p>
-                These are just things I built as I was learning my way through
-                web development.
-              </p>
-            </div>
+            <About />
+            <Skills />
+            <Work />
+            <Programming />
+            <WebJourney />
+            <Projects />
           </ColumnRight>
         </section>
       </main>
@@ -389,17 +207,3 @@ const IndexPage: React.FC = () => {
 }
 
 export default IndexPage
-
-// const sections = [About, Skills, Experience, Projects, Blogs]
-
-// const IndexPage: React.FC = () => {
-//   return (
-//     <Layout>
-//       <SEO />
-
-//       {sections.map((Section, index) => (
-//         <Card key={index} Component={<Section />} />
-//       ))}
-//     </Layout>
-//   )
-// }
