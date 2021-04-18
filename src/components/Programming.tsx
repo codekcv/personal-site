@@ -34,7 +34,10 @@ const Programming: React.FC = () => (
     </p>
 
     <h3>2019 - Current (JavaScript and the likes)</h3>
-    <p>This is the era I started my web development.</p>
+    <p>
+      This is the era I started my web development career and got a job. Read
+      more about this at the web journey section.
+    </p>
 
     <h3>Languages learning on the side</h3>
     <p>
