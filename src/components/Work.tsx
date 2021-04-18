@@ -2,6 +2,9 @@ import * as React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
+  > h2 {
+    font-size: 1.5rem;
+  }
   > .date {
     margin-top: -16px;
     font-size: 0.8rem;
@@ -15,6 +18,10 @@ const Container = styled.div`
 
   > .hov-project {
     margin-bottom: 3rem;
+
+    h3 {
+      font-size: 1.15rem;
+    }
 
     .sub {
       margin-top: -16px;
@@ -46,7 +53,7 @@ const Wallet = () => (
       team in an agile environment that maintain, develop, test, and ships
       features.
     </p>
-    <h4>Notable Technologies Used</h4>
+
     <ul className="tech-used">
       <li>React</li>
       <li>Redux</li>
@@ -130,7 +137,7 @@ const Work: React.FC = () => (
     <h1>* WORK EXPERIENCE</h1>
 
     <h2>
-      High Output Ventures (
+      - High Output Ventures (
       <a href="https://hov.co/" target="_blank" rel="noopener noreferrer">
         hov.co
       </a>
@@ -157,13 +164,16 @@ const Work: React.FC = () => (
 
     <div className="divider" />
 
-    <h2>{`{ Insert Company Name }`}</h2>
+    <h2>{`- { Insert Company Name }`}</h2>
     <div className="date">202X - 20XX | Software Engineer</div>
-    <p>Hire me. Making everything win.</p>
+    <p>
+      Hire me. Making everything win. I put my heart and soul into it. I live
+      and breathe programming.
+    </p>
 
     <div className="divider" />
 
-    <h2>Sheperd</h2>
+    <h2>- Sheperd</h2>
     <div className="date">2060 - To Death</div>
     <p className="work-description">
       Milking cows and tending sheeps in a peaceful farm at a mountain side with

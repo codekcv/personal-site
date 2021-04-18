@@ -13,15 +13,14 @@ const Container = styled.div`
     > h1 {
       font-family: Impact, sans-serif;
       font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+      margin: 0 0 0.5rem 0;
     }
   }
 
   > .quick-links {
-    margin-bottom: 1rem;
-
     > ul {
       list-style: none;
+      flex-direction: column;
     }
   }
 
@@ -29,7 +28,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-bottom: 1rem;
 
     > .links-container {
       width: 220px;
@@ -37,9 +35,10 @@ const Container = styled.div`
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
+      list-style: none;
 
-      > a {
-        margin-left: 0.5rem;
+      > li {
+        margin-left: 0.4rem;
       }
     }
   }
@@ -47,6 +46,10 @@ const Container = styled.div`
   > a {
     margin-top: 0.5rem;
     display: block;
+  }
+
+  h2 {
+    margin-bottom: 0;
   }
 
   p {
@@ -60,6 +63,33 @@ const Container = styled.div`
     padding: 2rem;
   }
 `
+
+const links: { name: string; url: string }[] = [
+  {
+    name: "GitHub",
+    url: "http://github.com/codekcv",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/codekcv/",
+  },
+  {
+    name: "CodePen",
+    url: "https://codepen.io/codekcv",
+  },
+  {
+    name: "dev.to",
+    url: "https://dev.to/codekcv",
+  },
+  {
+    name: "freeCodeCamp",
+    url: "https://www.freecodecamp.org/codekcv",
+  },
+  {
+    name: "YouTube",
+    url: "https://www.youtube.com/channel/UC9NkngOuNAcPGfx4Nl3ODgg/videos",
+  },
+]
 
 const Header: React.FC = () => (
   <Container>
@@ -79,6 +109,7 @@ const Header: React.FC = () => (
 
     <div className="quick-links">
       <h2>Quick Nav</h2>
+
       <ul>
         <li>
           <a href="#about">About</a>
@@ -104,22 +135,25 @@ const Header: React.FC = () => (
     <div className="links">
       <h2>My Links</h2>
 
-      <div className="links-container">
-        <a href="http://github.com/codekcv">GitHub</a>
-        <a href="https://www.linkedin.com/in/codekcv/">LinkedIn</a>
-        <a href="https://twitter.com/codekcv">Twitter</a>
-        <a href="https://codepen.io/codekcv">CodePen</a>
-        <a href="https://dev.to/codekcv">dev.to</a>
-        <a href="https://www.freecodecamp.org/codekcv">freeCodeCamp</a>
-        <a href="https://www.youtube.com/channel/UC9NkngOuNAcPGfx4Nl3ODgg/videos">
-          YouTube
-        </a>
-      </div>
+      <ul className="links-container">
+        {links.map(link => (
+          <li>
+            <a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
 
     <p>
-      This is my second portfolio site. See my first one when I was starting out
-      with web
+      This is my simple second portfolio site. See my first creative one with
+      native CSS animations.
     </p>
 
     <a href="http://codekcv.github.io/">codekcv.github.io</a>

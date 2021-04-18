@@ -19,7 +19,17 @@ const Programming: React.FC = () => (
   <Container id="programming">
     <h1>* PROGRAMMING EXPERIENCE</h1>
 
-    <h3>2006 - 2009 (hobbyist)</h3>
+    <h3>
+      2006 - 2009 (hobbyist,{" "}
+      <a
+        href="https://wc3we.fandom.com/wiki/Jass_Coding"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        JASS
+      </a>
+      )
+    </h3>
     <p>
       I self-taught myself to program when I was 12 using Blizzard's event
       driven scripting langauge called JASS. I used it to create mods and custom
