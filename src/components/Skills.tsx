@@ -4,11 +4,6 @@ import styled from "styled-components"
 const Container = styled.div`
   > .skill {
     margin-bottom: 1rem;
-
-    > ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
 `
 
