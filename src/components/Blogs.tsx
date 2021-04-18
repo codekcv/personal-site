@@ -3,6 +3,11 @@ import styled from "styled-components"
 
 const Container = styled.div``
 
-const Blogs: React.FC = () => <Container>Blog</Container>
+const Blogs: React.FC = () => (
+  <Container>
+    <h1>* Tech Blogs</h1>
+    <p>Coming soon...</p>
+  </Container>
+)
 
 export default Blogs

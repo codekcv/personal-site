@@ -9,6 +9,7 @@ import WebJourney from "src/components/WebJourney"
 import Projects from "src/components/Projects"
 import Header from "src/components/Header"
 import "../../global.css"
+import Blogs from "src/components/Blogs"
 
 const Container = styled.main`
   display: flex;
@@ -32,7 +33,7 @@ const Container = styled.main`
     position: relative;
     width: 540px;
     left: 260px;
-    padding-top: 8rem;
+    padding-top: 3.5rem;
 
     > div {
       padding: 2rem;
@@ -118,6 +119,7 @@ const IndexPage: React.FC = () => {
         <Programming />
         <WebJourney />
         <Projects />
+        <Blogs />
       </section>
     </Container>
   )
