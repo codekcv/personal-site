@@ -40,13 +40,18 @@ const Container = styled.main`
     }
   }
 
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+  }
+
   li {
     margin-left: 1.65rem;
   }
 
   h1 {
     font-size: 1.75rem;
-    margin-bottom: 1rem;
   }
 
   h2 {
@@ -69,8 +74,17 @@ const Container = styled.main`
 
     > .column-right {
       left: 0;
+      padding: 0;
       padding-top: 2rem;
       width: 100%;
+
+      > div {
+        padding: 1rem;
+      }
+    }
+
+    ul {
+      padding-left: 0;
     }
 
     h1 {
