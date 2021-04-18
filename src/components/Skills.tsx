@@ -23,7 +23,7 @@ const skills: { category: string; technologies: string[] }[] = [
       "sass",
       "Framer Motion",
       "tailwindCSS",
-      "chakra",
+      "Chakra UI",
     ],
   },
   {
