@@ -17,28 +17,30 @@ const Container = styled.div`
     }
   }
 
-  > .quick-links {
-    > ul {
-      list-style: none;
-      flex-direction: column;
+  > .links-container {
+    > .quick-links {
+      > ul {
+        list-style: none;
+        flex-direction: column;
+      }
     }
-  }
 
-  > .links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
-    > .links-container {
-      width: 220px;
-
+    > .links {
       display: flex;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      list-style: none;
+      flex-direction: column;
+      align-items: flex-end;
 
-      > li {
-        margin-left: 0.4rem;
+      > .links-container-2 {
+        width: 220px;
+
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        list-style: none;
+
+        > li {
+          margin-left: 0.4rem;
+        }
       }
     }
   }
@@ -61,6 +63,32 @@ const Container = styled.div`
     margin-top: 4rem;
     width: 100%;
     padding: 2rem;
+
+    > .links-container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .quick-links {
+        width: 50%;
+        text-align: right;
+      }
+
+      > .links {
+        position: relative;
+        width: 50%;
+        align-items: flex-start;
+
+        .links-container-2 {
+          width: 100%;
+          justify-content: flex-start;
+
+          > li {
+            margin: 0 0.4rem 0 0;
+          }
+        }
+      }
+    }
   }
 `
 
@@ -107,54 +135,53 @@ const Header: React.FC = () => (
       <p>I build web sites and web applications.</p>
     </div>
 
-    <div className="quick-links">
-      <h2>Quick Nav</h2>
+    <div className="links-container">
+      <div className="quick-links">
+        <h2>Quick Nav</h2>
 
-      <ul>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#work">Work Exp</a>
-        </li>
-        <li>
-          <a href="#programming">Prog Exp</a>
-        </li>
-        <li>
-          <a href="#web">Web Journey</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-      </ul>
-    </div>
-
-    <div className="links">
-      <h2>My Links</h2>
-
-      <ul className="links-container">
-        {links.map(link => (
+        <ul>
           <li>
-            <a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.name}
-            </a>
+            <a href="#about">About</a>
           </li>
-        ))}
-      </ul>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#work">Work Exp</a>
+          </li>
+          <li>
+            <a href="#programming">Prog Exp</a>
+          </li>
+          <li>
+            <a href="#web">Web Journey</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="links">
+        <h2>My Links</h2>
+
+        <ul className="links-container-2">
+          {links.map(link => (
+            <li>
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
 
-    <p>
-      This is my simple second portfolio site. See my first creative one with
-      native CSS animations.
-    </p>
+    <p>This is my simple second portfolio site. My fancier one is here.</p>
 
     <a href="http://codekcv.github.io/">codekcv.github.io</a>
   </Container>

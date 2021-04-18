@@ -39,6 +39,10 @@ const Container = styled.main`
       padding: 2rem;
       border-bottom: 3px dotted rgba(50, 100, 100, 0.15);
     }
+
+    > div:last-child {
+      border-bottom: none;
+    }
   }
 
   ul {
@@ -76,7 +80,7 @@ const Container = styled.main`
     > .column-right {
       left: 0;
       padding: 0;
-      padding-top: 2rem;
+      padding-top: 0rem;
       width: 100%;
 
       > div {

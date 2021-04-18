@@ -33,7 +33,7 @@ const Programming: React.FC = () => (
     <p>
       I self-taught myself to program when I was 12 using Blizzard's event
       driven scripting langauge called JASS. I used it to create mods and custom
-      maps in Warcraft III and StarCraft II. Fun times.
+      maps in Warcraft III. Fun times.
     </p>
 
     <h3>2011 - 2016 (java, c++, c#)</h3>
