@@ -33,7 +33,7 @@ const Container = styled.main`
     position: relative;
     width: 540px;
     left: 260px;
-    padding-top: 3.5rem;
+    padding-top: 4.5rem;
 
     > div {
       padding: 2rem;

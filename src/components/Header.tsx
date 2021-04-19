@@ -34,8 +34,8 @@ const Container = styled.div`
         width: 220px;
 
         display: flex;
-        justify-content: flex-end;
-        flex-wrap: wrap;
+        align-items: flex-start;
+        flex-direction: column;
         list-style: none;
 
         > li {
@@ -131,6 +131,7 @@ const Header: React.FC = () => (
         placeholder="tracedSVG"
         style={{ borderRadius: 8 }}
       />
+
       <h1>CHRISTIAN VILLAMIN</h1>
       <p>I build web sites and web applications.</p>
     </div>
@@ -166,7 +167,7 @@ const Header: React.FC = () => (
 
         <ul className="links-container-2">
           {links.map(link => (
-            <li>
+            <li key={link.name}>
               <a
                 key={link.name}
                 href={link.url}
