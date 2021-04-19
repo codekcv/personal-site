@@ -1,4 +1,5 @@
 import * as React from "react"
+import "../../global.css"
 import styled from "styled-components"
 import SEO from "src/components/SEO"
 import About from "src/components/About"
@@ -8,7 +9,6 @@ import Programming from "src/components/Programming"
 import WebJourney from "src/components/WebJourney"
 import Projects from "src/components/Projects"
 import Header from "src/components/Header"
-import "../../global.css"
 import Blogs from "src/components/Blogs"
 
 const Container = styled.main`
