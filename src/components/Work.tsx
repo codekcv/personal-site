@@ -44,7 +44,7 @@ const Container = styled.div`
 
 const Wallet = () => (
   <div className="hov-project">
-    <h3>Enterprise Dashboard Project 1</h3>
+    <h3>Private Enterprise Project 1</h3>
     <p className="sub">Project I mainted and developed in HOV.</p>
     <p>
       Worked with a team of designers, QA Specialists, backend engineers, and
@@ -164,17 +164,19 @@ const Work: React.FC = () => (
 
     <div className="divider" />
 
-    <h2>{`- { Insert Company Name }`}</h2>
+    <h2>{`- { yourCompanyName }`}</h2>
     <div className="date">202X - 20XX | Software Engineer</div>
     <p>
-      Hire me. Making everything win. I put my heart and soul into it. I live
-      and breathe programming.
+      Hire me. I live and breathe programming. Getting stuff done and winning
+      things. I love meeting new devs and learning with each other. I adapt to
+      environments quick as I'm always excited to the fast evergrowing
+      technology field.
     </p>
 
     <div className="divider" />
 
-    <h2>- Sheperd</h2>
-    <div className="date">2060 - To Death</div>
+    <h2>- Self-Employed</h2>
+    <div className="date">2060 - To Death | Sheperd</div>
     <p className="work-description">
       Milking cows and tending sheeps in a peaceful farm at a mountain side with
       a waterfall and a river crossing.
