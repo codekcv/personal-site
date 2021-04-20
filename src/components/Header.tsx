@@ -34,8 +34,8 @@ const Container = styled.div`
         width: 220px;
 
         display: flex;
-        align-items: flex-start;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
         list-style: none;
 
         > li {
@@ -81,7 +81,11 @@ const Container = styled.div`
 
         .links-container-2 {
           width: 100%;
-          justify-content: flex-start;
+          /* justify-content: flex-start; */
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          list-style: none;
 
           > li {
             margin: 0 0.4rem 0 0;
