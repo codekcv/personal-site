@@ -39,8 +39,16 @@ const Programming: React.FC = () => (
     <h3>2011 - 2016 (java, c++, c#)</h3>
     <p>
       Learned Java in school. I used it to create applications, join in
-      programming competitions(and win). Created an android game. c++ was taught
-      but nothing fancy. Some c# because I got also interested in Unity3D.
+      programming competitions(
+      <a
+        href="https://drive.google.com/file/d/192NsAwp8o68biwlWBC-faXvwl-GAf2ri/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        and win
+      </a>
+      ). Created an android game. c++ was taught but nothing fancy. Some c#
+      because I got also interested in Unity3D.
     </p>
 
     <h3>2019 - Current (JavaScript and the likes)</h3>

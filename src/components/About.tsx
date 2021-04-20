@@ -21,6 +21,16 @@ const About: React.FC = () => (
       view. nature is beautiful and it is life. detective conan fanboi. happy
       kid :)
     </p>
+
+    <p>
+      <a
+        href="https://drive.google.com/file/d/1Z1HrLPj4uNKZAzA7RkrIdzn77b52KwsR/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        resume
+      </a>
+    </p>
   </Container>
 )
 
