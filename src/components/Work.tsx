@@ -84,7 +84,8 @@ const Her = () => (
 
       <p>
         HER is a blogging site about better living of Vietnamese women. A
-        project I built from scratch and as a sole front-end developer.
+        project I built from scratch with mobile, tablet, and desktop
+        responsiveness. And as the sole front-end developer.
       </p>
 
       <ul className="tech-used">
