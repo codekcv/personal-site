@@ -80,6 +80,7 @@ const Her = () => (
         </a>
         )
       </h3>
+
       <div className="sub">Project I built for HOV</div>
 
       <p>

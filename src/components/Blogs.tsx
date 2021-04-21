@@ -5,7 +5,7 @@ const Container = styled.div``
 
 const Blogs: React.FC = () => (
   <Container>
-    <h1>* Tech Blogs</h1>
+    <h1>* Blogs</h1>
     <p>Coming soon...</p>
   </Container>
 )
