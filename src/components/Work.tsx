@@ -169,10 +169,9 @@ const Work: React.FC = () => (
     <h2>{`- { yourCompanyName }`}</h2>
     <div className="date">202X - 20XX | Software Engineer</div>
     <p>
-      Hire me. I live and breathe programming. Getting stuff done and winning
-      things. I love meeting new devs and learning with each other. I adapt to
-      environments quick as I'm always excited to the fast evergrowing
-      technology field.
+      Hire me. I live and breathe programming. I love meeting new people and
+      learning with each other. I quickly adapt to environments. I learn fast.
+      Always tinkering and excited in ever-growing tech. I'm a bit crazy too.
     </p>
 
     <div className="divider" />
